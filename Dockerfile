@@ -8,6 +8,6 @@ apt-get purge -y --auto-remove make postgresql-server-dev-12 gcc wget && rm -rf 
 RUN sed -i -E "s/^shared_preload_libraries='citus'/shared_preload_libraries='citus, pg_partman_bgw, pg_stat_statements'/" /usr/share/postgresql/postgresql.conf.sample && \
 echo "pg_partman_bgw.dbname='postgres'" >> /usr/share/postgresql/postgresql.conf.sample && \
 echo "pg_partman_bgw.interval=3600" >> /usr/share/postgresql/postgresql.conf.sample && \
-echo "pg_partman_bgw.role='postgres'" >> /usr/share/postgresql/postgresql.conf.sample && \
+echo "pg_partman_bgw.role='partman'" >> /usr/share/postgresql/postgresql.conf.sample && \
 echo "pg_partman_bgw.analyze='off'" >> /usr/share/postgresql/postgresql.conf.sample && \
 echo "pg_partman_bgw.jobmon='off'" >> /usr/share/postgresql/postgresql.conf.sample
