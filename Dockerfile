@@ -1,6 +1,6 @@
 FROM citusdata/citus:9.2
 
-RUN apt-get update && apt-get install -y make postgresql-server-dev-12 gcc wget
+RUN apt-get update && apt-get install -y make postgresql-server-dev-12 postgresql-client-12 gcc wget
 RUN mkdir -p /build && cd /build && wget https://github.com/pgpartman/pg_partman/archive/v4.3.0.tar.gz && \
 tar xf v4.3.0.tar.gz && cd pg_partman-4.3.0 && make install && rm -rf /build && \
 apt-get purge -y --auto-remove make postgresql-server-dev-12 gcc wget && rm -rf /var/lib/apt/lists/*
