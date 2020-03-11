@@ -1,1 +1,1 @@
-# docker-citus-partman
+# docker-citus
