@@ -1,6 +1,6 @@
 # docker-citus
 
-## extension
+## extensions
 
 * cstore_fdw
 * pg_partman
