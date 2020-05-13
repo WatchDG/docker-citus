@@ -1,5 +1,5 @@
 FROM citusdata/citus:9
-RUN apt-get update && apt-get install -y wget make gcc g++ protobuf-c-compiler libprotobuf-c-dev postgresql-server-dev-12 \
+RUN apt-get update && apt-get install -y wget make gcc g++ protobuf-c-compiler libprotobuf-c-dev postgresql-server-dev-12 postgresql-plpython3-12 \
 && mkdir -p /build && cd /build \
 && wget https://github.com/citusdata/pg_cron/archive/v1.2.0.tar.gz -O cron.tar.gz \
 && tar xf cron.tar.gz --strip-components=1 && make && make install && rm -rf /build \

@@ -1,5 +1,9 @@
 # docker-citus
 
+## languages
+
+* plpython3
+
 ## extensions
 
 * pg_cron           (v1.2.0)
